@@ -11,7 +11,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://benjienonato.com'), // Update with your actual domain
+  metadataBase: new URL('https://portfolio.benjiepersonal.space'),
   title: {
     default: 'Benjie Nonato | Full Stack Developer & Team Leader',
     template: '%s | Benjie Nonato',
@@ -37,6 +37,19 @@ export const metadata: Metadata = {
   authors: [{ name: 'Benjie Louise T. Nonato' }],
   creator: 'Benjie Louise T. Nonato',
   publisher: 'Benjie Louise T. Nonato',
+  alternates: {
+    canonical: 'https://portfolio.benjiepersonal.space',
+  },
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/icon.png', type: 'image/png', sizes: '32x32' },
+    ],
+    apple: [
+      { url: '/apple-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+  },
+  manifest: '/manifest.json',
   formatDetection: {
     email: false,
     address: false,
@@ -45,7 +58,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://benjienonato.com',
+    url: 'https://portfolio.benjiepersonal.space',
     title: 'Benjie Nonato | Full Stack Developer & Team Leader',
     description:
       'Full Stack Developer leading teams to build comprehensive mobile and web platforms using React, React Native, Supabase, and AWS.',
@@ -90,6 +103,28 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable}>
       <head>
+        {/* Google Analytics */}
+        {process.env.NEXT_PUBLIC_GA_ID && (
+          <>
+            <script
+              async
+              src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
+            />
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}', {
+                    page_path: window.location.pathname,
+                  });
+                `,
+              }}
+            />
+          </>
+        )}
+        
         {/* JSON-LD Structured Data */}
         <script
           type="application/ld+json"
@@ -98,8 +133,8 @@ export default function RootLayout({
               '@context': 'https://schema.org',
               '@type': 'Person',
               name: 'Benjie Louise T. Nonato',
-              url: 'https://benjienonato.com',
-              image: 'https://benjienonato.com/images/profile.jpg',
+              url: 'https://portfolio.benjiepersonal.space',
+              image: 'https://portfolio.benjiepersonal.space/images/profile.jpg',
               jobTitle: 'Full Stack Developer',
               worksFor: {
                 '@type': 'Organization',
