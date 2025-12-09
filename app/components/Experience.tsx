@@ -109,10 +109,10 @@ export default function Experience() {
 
               <div className="flex flex-col md:flex-row gap-6">
                 {/* Timeline Dot */}
-                <div className="flex-shrink-0">
+                <div className="shrink-0">
                   <div className={`w-16 h-16 rounded-full flex items-center justify-center ${
                     exp.current 
-                      ? 'bg-gradient-to-br from-blue-500 to-blue-700 shadow-lg' 
+                      ? 'bg-linear-to-br from-blue-500 to-blue-700 shadow-lg' 
                       : 'bg-white border-4 border-blue-300'
                   }`}>
                     <FaBriefcase className={`text-2xl ${exp.current ? 'text-white' : 'text-blue-600'}`} />

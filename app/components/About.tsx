@@ -183,7 +183,7 @@ export default function About() {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="max-w-2xl mx-auto"
         >
-          <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 text-center shadow-lg">
+          <div className="bg-linear-to-br from-blue-50 to-blue-100 rounded-2xl p-8 text-center shadow-lg">
             <h4 className="text-2xl font-bold text-gray-900 mb-2">
               Bachelor of Science in Information Technology
             </h4>

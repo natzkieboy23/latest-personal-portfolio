@@ -130,14 +130,14 @@ export default function Projects() {
               }`}
             >
               {/* Project Image/Placeholder */}
-              <div className="relative h-48 bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center">
+              <div className="relative h-48 bg-linear-to-br from-blue-500 to-blue-700 flex items-center justify-center">
                 {project.featured && (
                   <div className="absolute top-4 right-4 bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-xs font-bold">
                     Featured
                   </div>
                 )}
                 <FaCode className="text-6xl text-white/30" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                <div className="absolute inset-0 bg-linear-to-t from-black/50 to-transparent"></div>
               </div>
 
               {/* Project Content */}

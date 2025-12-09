@@ -73,7 +73,7 @@ export default function Footer() {
               <li className="flex items-center">
                 <FaLinkedin className="mr-3 text-blue-500" />
                 <a
-                  href="https://www.linkedin.com/in/natzkie2"
+                  href="https://www.linkedin.com/in/benjiedev95"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-white transition-colors"

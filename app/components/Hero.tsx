@@ -20,7 +20,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-gray-100 pt-20">
+    <section className="relative min-h-screen flex items-center justify-center bg-linear-to-br from-gray-50 to-gray-100 pt-20">
       <div className="container mx-auto px-6 py-20">
         <div className="flex flex-col items-center text-center">
           {/* Profile Image */}

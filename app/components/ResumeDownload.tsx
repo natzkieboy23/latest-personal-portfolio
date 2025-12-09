@@ -19,7 +19,7 @@ export default function ResumeDownload() {
   };
 
   return (
-    <section id="resume" className="py-20 bg-gradient-to-br from-blue-600 to-blue-800" ref={ref}>
+    <section id="resume" className="py-20 bg-linear-to-br from-blue-600 to-blue-800" ref={ref}>
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
